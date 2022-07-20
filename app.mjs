@@ -4,7 +4,7 @@ function startApp() {
   // so create and use/call additional functions from here
 
   // pls remove the below and make some magic in here!
-  console.log('You mean this magic?');
+  console.log('You mean this magic!!!!');
 
   const header = document.querySelector('h2');
   header.style.color = "green";
