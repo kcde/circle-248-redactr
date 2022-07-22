@@ -1,0 +1,60 @@
+:root {
+    --custom-color: rgb(57, 167, 81);
+    --padding: 20px;
+    --border-radius: 8px;
+    --font-size: 1.2em;
+    --margin-top: 10px;
+}
+
+
+*{
+margin:0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.body{
+    font-size: 16px;
+}
+
+.box {
+    padding: var(--padding);
+    border-radius: 8px;
+}
+
+.container{
+    width:1200px;
+    max-width:100%;
+    }
+
+.form {
+    width: 60%;
+    margin: 30px auto;
+    }
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: var(--margin-top);
+
+}
+
+.form-group-label {
+    color: var(--custom-color);
+    font-size: 1.2em;
+}
+
+.btn-red{
+    background-color: rgb(77, 155, 110);
+    border: none;
+    border-radius: var(--border-radius);
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.text{
+    color: var(--custom-color);
+    text-align: center;
+}
