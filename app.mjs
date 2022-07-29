@@ -14,7 +14,7 @@ function startApp() {
   submitButton.addEventListener("click", redactr);
 
   function redactr() {
-    var newString = mainText.value;
+    var newString = " "+mainText.value;
     let wordArray = wordsToRedact.value.split(/\s+/i);
     const errorWords = [];
     
@@ -24,7 +24,7 @@ function startApp() {
         errorWords.push(" "+wordArray[i]);
         console.log(errorWords);
       } else {
-        newString = newString.replace(re, "*".repeat(wordArray[i].length));
+        newString = newString.replace(re, " "+"*".repeat(wordArray[i].length));
       }
     };
     if (errorWords.length > 0) {

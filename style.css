@@ -1,5 +1,5 @@
 :root {
-    --custom-color: rgb(57, 167, 81);
+    --custom-color: green;
     --padding: 20px;
     --border-radius: 8px;
     --font-size: 1.2em;
@@ -13,13 +13,13 @@ padding: 0;
 box-sizing: border-box;
 }
 
-.body{
-    font-size: 16px;
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .box {
     padding: var(--padding);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 
 .container{
@@ -42,16 +42,18 @@ box-sizing: border-box;
 
 .form-group-label {
     color: var(--custom-color);
-    font-size: 1.2em;
+    font-size: var(--font-size);
 }
 
 .btn-red{
-    background-color: rgb(77, 155, 110);
+    background-color: var(--custom-color);
     border: none;
     border-radius: var(--border-radius);
+    padding: var(--padding);
+    font-size: var(--font-size);
     color: white;
     text-align: center;
-    border-radius: 3px;
+    border-radius: var(--border-radius);
 }
 
 .text{
