@@ -58,7 +58,7 @@ function startApp() {
 		let redactedCountList = ``
 
 		for (const word in redactedWordsCount) {
-			redactedCountList += `<li> ${word} - ${redactedWordsCount[word]} occurence${totalRedactedWordCount !== 1 ? 's' : ''} </li>`
+			redactedCountList += `<li> "${word}" - ${redactedWordsCount[word]} occurence${totalRedactedWordCount !== 1 ? 's' : ''} </li>`
 			totalRedactedWordCount += redactedWordsCount[word]
 		}
 
