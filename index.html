@@ -2,65 +2,71 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Name of chosen challenge</title>
-  <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Name of chosen challenge</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <h1 class="text"> Best Redact App </h1>
-  <main class="container">
-    <div class="form">
-      <div class="form-group">
-        <label class="form-group-label"> Enter full text</label>
-        <br>
-        <textarea rows="10" cols="47" class="box" id="mainText" required autofocus></textarea><br>
-      </div>
+	<h1 class="text"> Best Redact App </h1>
+	<main class="container">
+		<div class="form">
+			<div class="form-group">
+				<label class="form-group-label"> Enter full text</label>
+				<br>
+				<textarea rows="10" cols="47" class="box" id="mainText" required autofocus></textarea><br>
+			</div>
 
-      <div class="form-group">
-        <label class="form-group-label"> Words to be redacted</label><br>
-        <textarea rows="4" cols="47" class="box" id="wordsToRedact" required></textarea><br>
-      </div>
+			<div class="form-group">
+				<label class="form-group-label"> Words to be redacted (seperated by a space)</label><br>
+				<textarea rows="4" cols="47" class="box" id="wordsToRedact" required></textarea><br>
+			</div>
 
-      <div class="form-group">
-        <button class="btn-red" id="submitButton"> Redact </button>
-      </div>
+			<div class="form-group">
+				<button class="btn-red" id="submitButton"> Redact </button>
+			</div>
 
-      <div class="form-group">
-        <div id="errorText"></div><br>
-      </div>
+			<div class="form-group">
+				<div id="errorText"></div><br>
+			</div>
 
-      <div class="form-group">
-        <label class="form-group-label"> Final text</label><br>
-        <div class="box" id="finalText"></div><br>
-      </div>
+			<div class="form-group">
+				<label class="form-group-label"> Final text</label><br>
+				<div class="box" id="finalText"></div><br>
+			</div>
 
-      <div class="form-group">
-        <label class="form-group-label">Statistics</label><br>
-        <div class="box" id="timeTaken"></div><br>
-        <div class="box" id="textCount"></div><br>
-      </div>
-    </div>
-  </main>
+			<div class="form-group">
+				<label class="form-group-label">Statistics</label>
+				<div class="box" id="timeTaken"></div>
+				<div class="box" id="textCount"></div>
+				<div class="box countList" >
+					<h3>Number of occurences of redacted words</h2>
+					<ul id="wordCount">
+					</ul>
+					<p id='totalWordCount'></p>
+				</div><br>
+			</div>
+		</div>
+	</main>
 
-  <h2>CIRCLE 258 IS ON TRACK</h2>
-  <h3>Here we are!!!</h3>
-  <h1> musty added this </h1>
+	<h2>CIRCLE 258 IS ON TRACK</h2>
+	<h3>Here we are!!!</h3>
+	<h1> musty added this </h1>
 
 
-  <p>Keside is working on this branch</p>
+	<p>Keside is working on this branch</p>
 
-  <p> Tam added a paragraph </p>
+	<p> Tam added a paragraph </p>
 
-  <p> Iyanu added this line</p>
+	<p> Iyanu added this line</p>
 
 
-  <!-- // ============= EEND DO NOT EDIT ============== // -->
-  <script src="index.mjs" type="module"></script>
-  <!-- // ============= EEND DO NOT EDIT ============== // -->
+	<!-- // ============= EEND DO NOT EDIT ============== // -->
+	<script src="index.mjs" type="module"></script>
+	<!-- // ============= EEND DO NOT EDIT ============== // -->
 </body>
 
 </html>
