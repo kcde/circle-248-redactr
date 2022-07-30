@@ -14,7 +14,7 @@ function startApp() {
 	let wordCount = document.getElementById("wordCount");
 	let totalWordCount = document.getElementById("totalWordCount");
 
-	
+
 	var errorWords = [];
 
 	submitButton.addEventListener("click", redactr);
@@ -25,19 +25,19 @@ function startApp() {
 		let wordArray = wordsToRedact.value.split(/\s+/i);
 		const errorWords = [];
 		let redactedWordsCount = {}
-		
+
 		for (let i = 0; i < wordArray.length; i++) {
 			const re = new RegExp("\\s+" + wordArray[i] + "(?!\\S)", "gi");
-			
+
 			if (!re.test(newString)) {
 				errorWords.push(" " + wordArray[i]);
 			} else {
 				const numberOfOccurences = (newString.match(re) || []).length
-				
+
 				newString = newString.replace(re, " " + "*".repeat(wordArray[i].length));
-				
-				redactedWordsCount = {...redactedWordsCount, [wordArray[i]]: numberOfOccurences}
-				
+
+				redactedWordsCount = { ...redactedWordsCount, [wordArray[i]]: numberOfOccurences }
+
 			}
 		};
 
@@ -53,16 +53,18 @@ function startApp() {
 		timeTaken.innerHTML = "Time taken:  " + elapsedTime;
 		textCount.innerHTML = "Amount of words in original text:  " + mainText.value.split(/\s+/).length;
 
-		let totalRedactedWordCount = 0 
+		let totalRedactedWordCount = 0
+
+		let redactedCountList = ``
+
 		for (const word in redactedWordsCount) {
-			const li = document.createElement('li')
-			li.innerHTML = `${word} - ${redactedWordsCount[word]} occurence${totalRedactedWordCount !== 1 ?'s':''}` 
-			wordCount.appendChild(li)
-			totalRedactedWordCount = totalRedactedWordCount + redactedWordsCount[word]
+			redactedCountList += `<li> ${word} - ${redactedWordsCount[word]} occurence${totalRedactedWordCount !== 1 ? 's' : ''} </li>`
+			totalRedactedWordCount += redactedWordsCount[word]
 		}
-		
-		totalWordCount.innerHTML=`A total of ${totalRedactedWordCount} occurence${totalRedactedWordCount !== 1 ? 's were':' was'} redacted`
-	
+
+		wordCount.innerHTML = redactedCountList
+		totalWordCount.innerHTML = `A total of ${totalRedactedWordCount} occurence${totalRedactedWordCount !== 1 ? 's were' : ' was'} redacted`
+
 	};
 
 	const header = document.querySelector('h2');
