@@ -41,7 +41,6 @@ function startApp() {
 			}
 		};
 
-		console.log(redactedWordsCount)
 		if (errorWords.length > 0) {
 			errorText.innerHTML = "The following whole words were not found:<br>" + errorWords.toString();
 		} else {
