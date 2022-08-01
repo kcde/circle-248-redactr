@@ -13,8 +13,8 @@ function startApp() {
   let textCount = document.getElementById("textCount");
   let wordCount = document.getElementById("wordCount");
 
-let countDesc = document.getElementById("countDesc");
-  
+  let countDesc = document.getElementById("countDesc");
+
   let totalWordCount = document.getElementById("totalWordCount");
 
 
@@ -57,7 +57,7 @@ let countDesc = document.getElementById("countDesc");
 
     let totalRedactedWordCount = 0;
     let redactedCountList = ``;
-		countDesc.innerHTML = "Number of occurences of redacted words:<br>";
+    countDesc.innerHTML = "Number of occurences of redacted words:<br>";
     for (const word in redactedWordsCount) {
       redactedCountList += `<li> "${word}" - ${redactedWordsCount[word]} occurence${totalRedactedWordCount !== 1 ? 's' : ''} </li>`
       totalRedactedWordCount += redactedWordsCount[word]
